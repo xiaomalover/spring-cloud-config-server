@@ -1,0 +1,15 @@
+spring:
+  zipkin:
+    base-url: http://localhost:9411
+  application:
+    name: order-server
+server:
+  port: 2001
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1001/eureka/
+testStr: hello
+feign:
+  hystrix:
+    enabled: true
