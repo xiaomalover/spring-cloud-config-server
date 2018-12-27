@@ -7,9 +7,9 @@ server:
   port: 2002
 eureka:
   instance:
-    # Ã¿¸ô10s·¢ËÍÒ»´ÎĞÄÌø
+    # æ¯éš”10så‘é€ä¸€æ¬¡å¿ƒè·³
     lease-renewal-interval-in-seconds: 10
-    # ¸æÖª·şÎñ¶Ë30Ãë»¹Î´ÊÕµ½ĞÄÌøµÄ»°£¬¾Í½«¸Ã·şÎñÒÆ³ıÁĞ±í
+    # å‘ŠçŸ¥æœåŠ¡ç«¯30ç§’è¿˜æœªæ”¶åˆ°å¿ƒè·³çš„è¯ï¼Œå°±å°†è¯¥æœåŠ¡ç§»é™¤åˆ—è¡¨
     lease-expiration-duration-in-seconds: 30
   client:
     serviceUrl:
