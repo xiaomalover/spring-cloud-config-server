@@ -12,8 +12,10 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:1001/eureka/
-#zuul:
-#  routes:
-#    api-a:
-#      path: /api-a/**
-#      serviceId: order-server
+#如果不配置，默认会把eureka里注册的服务，按服务名字匹配url路径
+#下面是为了自定义一个到order-server的url路径
+zuul:
+  routes:
+    api-a:
+      path: /custom-order-url/**
+      serviceId: order-server
