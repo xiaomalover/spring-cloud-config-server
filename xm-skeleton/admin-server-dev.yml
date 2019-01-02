@@ -1,14 +1,17 @@
 # 配置文件加密key
 jasypt:
   encryptor:
-    password: mozi
-
+    password: skeleton
 server:
   port: 2003
   servlet:
     context-path: /
 
 spring:
+  zipkin:
+    base-url: http://localhost:9411
+  application:
+    name: pay-server
   #main:
     #sources: classpath:config/dubbo-consumer-dev.xml
   # 数据源
@@ -59,7 +62,7 @@ spring:
       max-file-size: 50Mb
       max-request-size: 50Mb
 
-mozi:
+skeleton:
   # 全局限流
   rateLimit:
     enable: true
@@ -90,9 +93,9 @@ mozi:
 # 忽略鉴权url
 ignored:
   urls:
-    - /mozi/permission/getMenuList/**
-    - /mozi/user/regist
-    - /mozi/common/**
+    - /skeleton/permission/getMenuList/**
+    - /skeleton/user/regist
+    - /skeleton/common/**
     - /druid/**
     - /swagger-ui.html
     - /swagger-resources/**
@@ -145,3 +148,14 @@ mybatis-plus:
 # 日志
 logging:
   file: D:/logs/com.xm.admin.log
+
+# 服务发现
+eureka:
+  instance:
+    # 每隔10s发送一次心跳
+    lease-renewal-interval-in-seconds: 10
+    # 告知服务端30秒还未收到心跳的话，就将该服务移除列表
+    lease-expiration-duration-in-seconds: 30
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1001/eureka/
