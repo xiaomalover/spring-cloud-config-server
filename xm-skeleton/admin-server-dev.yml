@@ -11,7 +11,7 @@ spring:
   zipkin:
     base-url: http://localhost:9411
   application:
-    name: pay-server
+    name: admin-server
   #main:
     #sources: classpath:config/dubbo-consumer-dev.xml
   # 数据源
