@@ -13,7 +13,7 @@ spring:
     #sources: classpath:config/dubbo-consumer-dev.xml
   # 数据源
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/mz_vmall?useUnicode=true&characterEncoding=utf-8&useSSL=false&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+    url: jdbc:mysql://127.0.0.1:3306/xm_skeleton?useUnicode=true&characterEncoding=utf-8&useSSL=false&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
     username: root
     # Jasypt加密 可到common-utils中找到JasyptUtil加解密工具类生成加密结果 格式为ENC(加密结果)
     password: root
