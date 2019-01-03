@@ -19,6 +19,3 @@ zuul:
     api-a:
       path: /custom-order-url/**
       serviceId: order-server
-    admin:
-      path: /admin/**
-      serviceId: admin-server
