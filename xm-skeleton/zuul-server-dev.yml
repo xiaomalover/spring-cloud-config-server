@@ -25,6 +25,6 @@ eureka:
 #下面是为了自定义一个到order-server的url路径
 zuul:
   routes:
-    api-a:
-      path: /custom-order-url/**
-      serviceId: order-server
+    user:
+      path: /api-service/user/**
+      serviceId: api-server
