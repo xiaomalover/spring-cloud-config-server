@@ -1,6 +1,15 @@
 spring:
   application:
     name: zuul-server
+  # Redis
+  redis:
+    host: 127.0.0.1
+    #password: 123456
+    # 数据库索引 默认0
+    database: 0
+    port: 9637
+    timeout: 3000
+    password: 69F0ef5dd1d62ab48b13834286403A
 server:
   port: 4001
 eureka:
