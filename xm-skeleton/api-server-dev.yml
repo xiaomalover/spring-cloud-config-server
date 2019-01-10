@@ -12,6 +12,35 @@ spring:
     port: 9637
     timeout: 3000
     password: 69F0ef5dd1d62ab48b13834286403A
+    # 数据源
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/xm_skeleton?useUnicode=true&characterEncoding=utf-8&useSSL=false&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+    username: root
+    # Jasypt加密 可到common-utils中找到JasyptUtil加解密工具类生成加密结果 格式为ENC(加密结果)
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+    driverClassName: com.mysql.jdbc.Driver
+    logSlowSql: true
+    # Druid StatViewServlet配置
+    druid:
+      stat-view-servlet:
+        # 默认true 内置监控页面首页/druid/index.html
+        enabled: true
+        url-pattern: /druid/*
+        # 允许清空统计数据
+        reset-enable: true
+        login-username: root
+        login-password: root
+        # IP白名单 多个逗号分隔
+        allow:
+        # IP黑名单
+      deny:
+  jpa:
+    show-sql: true
+    # 自动生成表结构
+    generate-ddl: true
+    hibernate:
+      ddl-auto: none
 server:
   port: 2008
 eureka:
