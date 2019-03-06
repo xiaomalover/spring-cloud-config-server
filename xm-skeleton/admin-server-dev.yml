@@ -120,8 +120,8 @@ swagger:
 
 # Mybatis-plus
 mybatis-plus:
-  # 放在resource目录 classpath:/mapper/*Mapper.xml
-  mapper-locations: classpath:/mapper/*/*Mapper.xml
+  # 放在resource目录 classpath:/mapper/*
+  mapper-locations: classpath:/mapper/*
   #实体扫描，多个package用逗号或者分号分隔
   typeAliasesPackage: com.xm.admin.*.*.entity
   typeEnumsPackage: com.xm.admin.*.*.entity
