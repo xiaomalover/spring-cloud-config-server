@@ -51,7 +51,7 @@ spring:
     database: 0
     port: 9637
     timeout: 3000
-    password: 69F0ef5dd1d62ab48b13834286403A
+    #password: 69F0ef5dd1d62ab48b13834286403A
   # 定时任务
   quartz:
     # 任务信息存储至数据库
