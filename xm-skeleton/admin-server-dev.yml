@@ -3,7 +3,7 @@ jasypt:
   encryptor:
     password: skeleton
 server:
-  port: 2003
+  port: 20003
   servlet:
     context-path: /
 
@@ -158,4 +158,4 @@ eureka:
     lease-expiration-duration-in-seconds: 30
   client:
     serviceUrl:
-      defaultZone: http://localhost:1001/eureka/
+      defaultZone: http://localhost:10001/eureka/

@@ -4,7 +4,7 @@ spring:
   application:
     name: order-server
 server:
-  port: 2001
+  port: 20001
 eureka:
   instance:
     # 每隔10s发送一次心跳
@@ -13,7 +13,7 @@ eureka:
     lease-expiration-duration-in-seconds: 30
   client:
     serviceUrl:
-      defaultZone: http://localhost:1001/eureka/
+      defaultZone: http://localhost:10001/eureka/
 testStr: hello world
 feign:
   hystrix:

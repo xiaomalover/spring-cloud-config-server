@@ -4,7 +4,7 @@ spring:
   application:
     name: pay-server
 server:
-  port: 2002
+  port: 20002
 eureka:
   instance:
     # 每隔10s发送一次心跳
@@ -13,4 +13,4 @@ eureka:
     lease-expiration-duration-in-seconds: 30
   client:
     serviceUrl:
-      defaultZone: http://localhost:1001/eureka/
+      defaultZone: http://localhost:10001/eureka/
