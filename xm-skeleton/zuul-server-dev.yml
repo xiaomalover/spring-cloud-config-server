@@ -11,7 +11,7 @@ spring:
     timeout: 3000
     password: 69F0ef5dd1d62ab48b13834286403A
 server:
-  port: 3001
+  port: 30001
 eureka:
   instance:
     # 每隔10s发送一次心跳
