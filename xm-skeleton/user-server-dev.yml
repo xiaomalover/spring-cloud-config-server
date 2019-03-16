@@ -42,7 +42,7 @@ spring:
     hibernate:
       ddl-auto: none
 server:
-  port: 20004
+  port: 20002
 eureka:
   instance:
     # 每隔10s发送一次心跳
