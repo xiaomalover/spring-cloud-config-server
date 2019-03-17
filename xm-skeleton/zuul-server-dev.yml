@@ -10,8 +10,10 @@ spring:
     port: 6379
     timeout: 3000
     #password: 69F0ef5dd1d62ab48b13834286403A
+
 server:
   port: 30001
+
 eureka:
   instance:
     # 每隔10s发送一次心跳
@@ -22,7 +24,8 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:10001/eureka/
 #如果不配置，默认会把eureka里注册的服务，按服务名字匹配url路径
-#下面是为了自定义一个到order-server的url路径
+
+#下面是为了自定义一个到user-server的url路径
 zuul:
   routes:
     user:

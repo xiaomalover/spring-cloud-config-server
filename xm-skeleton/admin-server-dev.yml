@@ -2,6 +2,7 @@
 jasypt:
   encryptor:
     password: skeleton
+
 server:
   port: 20003
   servlet:
@@ -12,13 +13,10 @@ spring:
     base-url: http://localhost:9411
   application:
     name: admin-server
-  #main:
-    #sources: classpath:config/dubbo-consumer-dev.xml
   # 数据源
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/xm_skeleton?useUnicode=true&characterEncoding=utf-8&useSSL=false&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
     username: root
-    # Jasypt加密 可到common-utils中找到JasyptUtil加解密工具类生成加密结果 格式为ENC(加密结果)
     password: root
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.jdbc.Driver
@@ -37,12 +35,6 @@ spring:
         allow:
         # IP黑名单
         deny:
-  jpa:
-    show-sql: true
-    # 自动生成表结构
-    generate-ddl: true
-    hibernate:
-      ddl-auto: none
   # Redis
   redis:
     host: 127.0.0.1
@@ -52,6 +44,7 @@ spring:
     port: 6379
     timeout: 3000
     #password: 69F0ef5dd1d62ab48b13834286403A
+
   # 定时任务
   quartz:
     # 任务信息存储至数据库
@@ -78,17 +71,6 @@ skeleton:
   loginTimeLimit: 10
   # 错误超过次数后多少分钟后才能继续登录（分钟）
   loginAfterTime: 10
-  logRecord:
-    es: false
-  # 七牛云配置
-  qiniu:
-    accessKey: 你的accessKey
-    secretKey: 你的secretKey
-    bucket: 你的空间名
-    domain: 你的测试域名，如http://p77xsahe9.bkt.clouddn.com/
-  # mob api配置 mob官网注册申请即可
-  mob:
-    appKey: 你的appKey
 
 # 忽略鉴权url
 ignored:
@@ -106,17 +88,6 @@ ignored:
     - /**/*.png
     - /**/*.ico
     - /test/**
-
-# Swagger界面内容配置
-swagger:
-  title: Mozi API接口文档
-  description: Mozi Api Documentation
-  version: 1.0.0
-  termsOfServiceUrl: ""
-  contact:
-    name: ""
-    url: ""
-    email: ""
 
 # Mybatis-plus
 mybatis-plus:
