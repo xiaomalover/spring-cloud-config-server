@@ -3,6 +3,10 @@ server:
   servlet:
     context-path: /
 
+upload:
+  rootPath: "D:\uploads",
+  domain: "http://img.skeleton.com",
+
 # 配置文件加密key
 jasypt:
   encryptor:
