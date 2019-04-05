@@ -1,12 +1,12 @@
-# 配置文件加密key
-jasypt:
-  encryptor:
-    password: skeleton
-
 server:
   port: 20003
   servlet:
     context-path: /
+
+# 配置文件加密key
+jasypt:
+  encryptor:
+    password: skeleton
 
 spring:
   zipkin:

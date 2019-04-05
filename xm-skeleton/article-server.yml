@@ -1,20 +1,11 @@
 server:
-  port: 20002
+  port: 20004
 
 spring:
   zipkin:
     base-url: http://localhost:9411
   application:
-    name: user-server
-  # Redis
-  redis:
-    host: 127.0.0.1
-    # 数据库索引 默认0
-    database: 0
-    port: 6379
-    timeout: 3000
-    #password: 69F0ef5dd1d62ab48b13834286403A
-    # 数据源
+    name: article-server
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/xm_skeleton?useUnicode=true&characterEncoding=utf-8&useSSL=false&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
     username: root
@@ -46,6 +37,10 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:10001/eureka/
+
+feign:
+  hystrix:
+    enabled: true
 
 # Mybatis-plus
 mybatis-plus:

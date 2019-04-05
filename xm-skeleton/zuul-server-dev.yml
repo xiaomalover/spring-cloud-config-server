@@ -1,3 +1,6 @@
+server:
+  port: 30001
+
 spring:
   application:
     name: zuul-server
@@ -10,9 +13,6 @@ spring:
     port: 6379
     timeout: 3000
     #password: 69F0ef5dd1d62ab48b13834286403A
-
-server:
-  port: 30001
 
 eureka:
   instance:
