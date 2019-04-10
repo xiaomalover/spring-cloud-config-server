@@ -56,8 +56,8 @@ spring:
   # 文件大小上传配置
   servlet:
     multipart:
-      max-file-size: 50Mb
-      max-request-size: 50Mb
+      max-file-size: 500000000
+      max-request-size: 500000000
 
 skeleton:
   # 全局限流
