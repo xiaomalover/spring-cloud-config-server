@@ -1,0 +1,43 @@
+server:
+  port: 30001
+  
+micro-server:
+  user-server: lb://user-server
+  api-server: lb://api-server
+ 
+spring:
+  application:
+    name: gateway-server
+
+  cloud:
+    gateway:
+      routes:
+        - id: route_user_server
+          uri: ${micro-server.user-server}
+          predicates:
+            - Path=/user/**
+        - id: route_api_server
+          uri: ${micro-server.api-server}
+          predicates:
+            - Path=/api/**
+  # Redis
+  redis:
+    host: 127.0.0.1
+    #password: 123456
+    # 数据库索引 默认0
+    database: 0
+    port: 6379
+    timeout: 3000
+    #password: 69F0ef5dd1d62ab48b13834286403A
+
+eureka:
+  instance:
+    # 每隔10s发送一次心跳
+    lease-renewal-interval-in-seconds: 10
+    # 告知服务端30秒还未收到心跳的话，就将该服务移除列表
+    lease-expiration-duration-in-seconds: 30
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:10001/eureka/
+#如果不配置，默认会把eureka里注册的服务，按服务名字匹配url路径
+
