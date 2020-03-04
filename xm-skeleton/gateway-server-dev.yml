@@ -4,6 +4,7 @@ server:
 micro-server:
   user-server: lb://user-server
   api-server: lb://api-server
+  article-server: lb://article-server
  
 spring:
   application:
@@ -20,6 +21,10 @@ spring:
           uri: ${micro-server.api-server}
           predicates:
             - Path=/api/**
+        - id: route_article_server
+          uri: ${micro-server.article-server}
+          predicates:
+            - Path=/article/**
   # Redis
   redis:
     host: 127.0.0.1
